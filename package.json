@@ -1,0 +1,30 @@
+{
+  "name": "atividade_pratica_node_rest_api",
+  "version": "1.0.0",
+  "description": "Atividade Pratica 80% M1 - Tópicos em Desenvolvimento de Sistemas de Informação",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuizAugustoGrein/atividade-m1-node-rest-api.git"
+  },
+  "keywords": [],
+  "author": "Luiz Augusto Grein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuizAugustoGrein/atividade-m1-node-rest-api/issues"
+  },
+  "homepage": "https://github.com/LuizAugustoGrein/atividade-m1-node-rest-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "firebase": "^9.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
