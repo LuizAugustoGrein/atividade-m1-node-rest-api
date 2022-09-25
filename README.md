@@ -17,13 +17,13 @@ Atividade Pratica 80% M1 - Tópicos em Desenvolvimento de Sistemas de Informaç�
 
 ## STORES
 
-### GET {HOST}/api/stores
+#### GET {HOST}/api/stores
 - return all stores
 
-### GET {HOST}/api/stores/{STORE_ID}
+#### GET {HOST}/api/stores/{STORE_ID}
 - return an unique store by id
 
-### POST {HOST}/api/stores
+#### POST {HOST}/api/stores
 - create a new store based on body
 Header 
     Content-Type: application/json
@@ -34,7 +34,7 @@ Body
     "address": "Rua Floriano Peixoto"
 }
 
-## PUT {HOST}/api/stores/{STORE_ID}
+#### PUT {HOST}/api/stores/{STORE_ID}
 - update a store by id based on body
 Header
     Content-Type: application/json
@@ -43,19 +43,19 @@ Body
     "city": "Rio Negro",
 }
 
-## DEL {HOST}/api/stores/{STORE_ID}
+#### DEL {HOST}/api/stores/{STORE_ID}
 - delete a store by id
 
 
 ## CUSTOMERS
 
-### GET {HOST}/api/customers
+#### GET {HOST}/api/customers
 - return all customers
 
-### GET {HOST}/api/customers/{CUSTOMER_ID}
+#### GET {HOST}/api/customers/{CUSTOMER_ID}
 - return an unique customer by id
 
-### POST {HOST}/api/customers
+#### POST {HOST}/api/customers
 - create a new customer based on body
 Header 
     Content-Type: application/json
@@ -67,7 +67,7 @@ Body
     "phone": "(47)93344-2211"
 }
 
-## PUT {HOST}/api/customers/{CUSTOMER_ID}
+#### PUT {HOST}/api/customers/{CUSTOMER_ID}
 - update a customer by id based on body
 Header
     Content-Type: application/json
@@ -77,7 +77,7 @@ Body
     "phone": "(47)93344-2233"
 }
 
-## DEL {HOST}/api/customers/{CUSTOMER_ID}
+#### DEL {HOST}/api/customers/{CUSTOMER_ID}
 - delete a customer by id
 
 
