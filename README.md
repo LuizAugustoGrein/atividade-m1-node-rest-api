@@ -1,5 +1,6 @@
 # atividade-m1-node-rest-api
 Atividade Pratica 80% M1 - Tópicos em Desenvolvimento de Sistemas de Informação
+Luiz Augusto Grein
 
 **Tecnologies**
 
@@ -25,23 +26,35 @@ Atividade Pratica 80% M1 - Tópicos em Desenvolvimento de Sistemas de Informaç�
 
 #### POST {HOST}/api/stores
 - create a new store based on body
+
 Header 
-    Content-Type: application/json
+
+Content-Type: application/json
+
 Body
+
+```JSON
 {
     "name": "filial 1",
     "city": "Mafra",
     "address": "Rua Floriano Peixoto"
 }
+```
 
 #### PUT {HOST}/api/stores/{STORE_ID}
 - update a store by id based on body
+
 Header
-    Content-Type: application/json
+
+Content-Type: application/json
+
 Body
+
+```JSON
 {
     "city": "Rio Negro",
 }
+```
 
 #### DEL {HOST}/api/stores/{STORE_ID}
 - delete a store by id
@@ -57,25 +70,36 @@ Body
 
 #### POST {HOST}/api/customers
 - create a new customer based on body
+
 Header 
-    Content-Type: application/json
+
+Content-Type: application/json
+
 Body
+
+```JSON
 {
     "name": "Luiz Augusto",
     "birthday": "2002-08-07",
     "address": "Rua Ramiro Ruthes",
     "phone": "(47)93344-2211"
 }
+```
 
 #### PUT {HOST}/api/customers/{CUSTOMER_ID}
 - update a customer by id based on body
 Header
-    Content-Type: application/json
+
+Content-Type: application/json
+
 Body
+
+```JSON
 {
     "address": "Outra rua",
     "phone": "(47)93344-2233"
 }
+```
 
 #### DEL {HOST}/api/customers/{CUSTOMER_ID}
 - delete a customer by id
@@ -83,6 +107,7 @@ Body
 
 ## Orders
 
+```JSON
 {
     "datetime": "2022-09-25T13:00:00",
     "store_id": "8iLY23eyzugdmAxxvSGm",
@@ -101,3 +126,4 @@ Body
         }
     ]
 }
+```
