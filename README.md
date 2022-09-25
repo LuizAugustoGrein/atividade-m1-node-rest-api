@@ -1,6 +1,16 @@
 # atividade-m1-node-rest-api
 Atividade Pratica 80% M1 - Tópicos em Desenvolvimento de Sistemas de Informação
-Luiz Augusto Grein
+
+Criação de API CRUD em um cenário de vendas em lojas
+
+a API teve base em 5 models:
+- customer
+- seller
+- store
+- product
+- order
+
+por Luiz Augusto Grein
 
 **Tecnologies**
 
@@ -14,7 +24,7 @@ Luiz Augusto Grein
 - Firebase
 - Nodemon
 
-# REQUEST EXAMPLES
+# Request Examples
 
 ## STORES
 
