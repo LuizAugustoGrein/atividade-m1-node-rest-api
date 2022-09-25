@@ -54,22 +54,25 @@ orderController.prototype.post = async (req, res) => {
 orderController.prototype.put = async (req, res) => {
     try {
         var body = req.body;
-        if (body.datetime && body.store_id && body.seller_id && body.customer_id && body.items) {
+        if (body.store_id) {
             var stores = await new storeRepository().getAll()
             var storeExists = false
             stores.forEach(doc => { if (doc.id === body.store_id) storeExists = true })
             if (!storeExists) res.status(400).send('Erro! loja não existente.')
-
+        }
+        if (body.seller_id) {
             var sellers = await new sellerRepository().getAll()
             var sellerExists = false
             sellers.forEach(doc => { if (doc.id === body.seller_id) sellerExists = true })
             if (!sellerExists) res.status(400).send('Erro! vendedor não existente.')
-
+        }
+        if (body.customer_id) {
             var customers = await new customerRepository().getAll()
             var customerExists = false
             customers.forEach(doc => { if (doc.id === body.customer_id) customerExists = true })
             if (!customerExists) res.status(400).send('Erro! cliente não existente.')
-
+        }
+        if (body.items) {
             var products = await new productRepository().getAll();
             var productError = false;
             var items = body.items;
@@ -78,16 +81,12 @@ orderController.prototype.put = async (req, res) => {
                 products.forEach(doc => { if (doc.id === item.product_id) productsExists = true })
                 if (!item.price_each || !item.quantity || !productsExists) productError = true
             })
-
             if (productError) {
                 res.status(400).send('Erro! parametros de items incorretos.')
-            } else {
-                await new repository().update(req.params.id, body)
-                res.status(202).send('Registro atualizado com sucesso!')
             }
-        } else {
-            res.status(400).send('Erro! parametros necessários.')
         }
+        await new repository().update(req.params.id, body)
+        res.status(202).send('Registro atualizado com sucesso!')
     } catch (error) {
         res.status(500).send(error)
     }

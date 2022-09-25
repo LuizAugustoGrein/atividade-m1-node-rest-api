@@ -14,7 +14,7 @@ Luiz Augusto Grein
 - Firebase
 - Nodemon
 
-**REQUEST EXAMPLES**
+# REQUEST EXAMPLES
 
 ## STORES
 
@@ -58,6 +58,7 @@ Body
 
 #### DEL {HOST}/api/stores/{STORE_ID}
 - delete a store by id
+
 
 
 ## CUSTOMERS
@@ -105,7 +106,111 @@ Body
 - delete a customer by id
 
 
-## Orders
+
+## SELLERS
+
+#### GET {HOST}/api/sellers
+- return all sellers
+
+#### GET {HOST}/api/sellers/{SELLER_ID}
+- return an unique seller by id
+
+#### POST {HOST}/api/sellers
+- create a new seller based on body
+
+Header 
+
+Content-Type: application/json
+
+Body
+
+```JSON
+{
+    "name": "vendedor 1",
+    "phone": "(47)94324-3333",
+    "store_id": "8iLY23eyzugdmAxxvSGm"
+}
+```
+
+#### PUT {HOST}/api/sellers/{SELLER_ID}
+- update a seller by id based on body
+Header
+
+Content-Type: application/json
+
+Body
+
+```JSON
+{
+    "store_id": "4lbq01jNi08T1v0xT83K"
+}
+```
+
+#### DEL {HOST}/api/sellers/{SELLER_ID}
+- delete a seller by id
+
+
+
+## PRODUCTS
+
+#### GET {HOST}/api/products
+- return all products
+
+#### GET {HOST}/api/products/{PRODUCT_ID}
+- return an unique product by id
+
+#### POST {HOST}/api/products
+- create a new product based on body
+
+Header 
+
+Content-Type: application/json
+
+Body
+
+```JSON
+{
+    "name": "produto",
+    "price": "20.0",
+    "description": "descricao do produto"
+}
+```
+
+#### PUT {HOST}/api/products/{PRODUCT_ID}
+- update a product by id based on body
+Header
+
+Content-Type: application/json
+
+Body
+
+```JSON
+{
+    "price": "25"
+}
+```
+
+#### DEL {HOST}/api/products/{PRODUCT_ID}
+- delete a product by id
+
+
+
+## ORDERS
+
+#### GET {HOST}/api/orders
+- return all orders
+
+#### GET {HOST}/api/orders/{ORDER_ID}
+- return an unique order by id
+
+#### POST {HOST}/api/orders
+- create a new order based on body
+
+Header 
+
+Content-Type: application/json
+
+Body
 
 ```JSON
 {
@@ -127,3 +232,31 @@ Body
     ]
 }
 ```
+
+#### PUT {HOST}/api/orders/{ORDER_ID}
+- update an order by id based on body
+Header
+
+Content-Type: application/json
+
+Body
+
+```JSON
+{
+    "items": [
+        {
+            "product_id": "KH8PjvEyCoaE4lSeoTKS",
+            "quantity": 5,
+            "price_each": 20
+        },
+        {
+            "product_id": "UinkCHQ4r7SYwR6XHIrC",
+            "quantity": 10,
+            "price_each": 10
+        }
+    ]
+}
+```
+
+#### DEL {HOST}/api/orders/{ORDER_ID}
+- delete an order by id
